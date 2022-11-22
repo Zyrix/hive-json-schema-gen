@@ -126,7 +126,7 @@ class HiveSchemaGenerator(table: String, location: String, serde: String, output
 
   def normalize(name: String) : String = {
     val n = name.toLowerCase();
-    if (escapeReservedKeywords && (reservedKeywords.contains(n) || name.startsWith("_") || isNumeric(n))) "`"+name+"`" else name
+    "`"+name+"`"
   }
 
   def isNumeric(s: String) : Boolean = {
